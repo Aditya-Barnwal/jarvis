@@ -1,0 +1,31 @@
+# Jarvis — Python dependencies. Install into a venv (see SETUP.md):
+#   python3.12 -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+
+# --- Brain + voice engine + memory (installed; hello_jarvis.py runs on these) ---
+openai            # one OpenAI-compatible client for BOTH Groq and Ollama
+python-dotenv     # load GROQ_API_KEY (and later Twilio keys) from .env
+kokoro            # natural British TTS (bm_george / bf_emma); needs espeak-ng + torch
+soundfile         # audio I/O for kokoro
+sounddevice       # audio playback (needs portaudio: `brew install portaudio`)
+pedalboard        # DSP pitch/rate shaping for the live voice controls
+numpy
+# memory = stdlib sqlite3 (no package needed)
+# System deps (once): brew install espeak-ng portaudio
+
+# --- Optional cloning/emotion engine (ISOLATED venv — conflicts with torch/numpy above) ---
+# In a SEPARATE venv only:  python3.12 -m venv .venv-chatterbox && \
+#   ./.venv-chatterbox/bin/pip install chatterbox-tts   # then JARVIS_TTS_ENGINE=chatterbox
+
+# --- Phase 1 M2/M3: ears — STT + hands-free (installed) ---
+# whisper.cpp is a system binary: brew install whisper-cpp (+ base.en model)
+openwakeword      # wake word detection ("hey jarvis")
+onnxruntime       # openWakeWord inference backend on Apple Silicon
+silero-vad        # end-of-speech detection (auto-stop recording)
+
+# --- Browser automation (Phase 4): web search, read pages, Gmail compose ---
+playwright        # then: playwright install chromium
+
+# --- Later phases ---
+# requests        # calling job-copilot + data APIs
+# pyyaml          # routine / progress files

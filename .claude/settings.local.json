@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(../.venv/bin/python hello_jarvis.py)",
+      "Bash(./.venv/bin/pip install *)",
+      "Bash(./.venv/bin/pip list *)",
+      "Bash(../.venv/bin/python hello_jarvis.py \"say hello in one short sentence\")",
+      "Bash(grep -vE \"^\\\\s*$\")",
+      "Bash(./.venv/bin/python \"/private/tmp/claude-501/-Users-adityabarnwal-Downloads-jarvis/2f3c6dc8-ee84-4743-a019-c52cfa64fed7/scratchpad/audition.py\")",
+      "Bash(./.venv/bin/pip show *)",
+      "Bash(./.venv/bin/python -c \"import pedalboard, torch, numpy; print\\('pedalboard', pedalboard.__version__, '| torch', torch.__version__, '| numpy', numpy.__version__, '— intact'\\)\")",
+      "Bash(./.venv/bin/python -c \"import sys; sys.path.insert\\(0,'src'\\); import memory; memory.forget\\('assistant_name'\\); memory.forget\\('voice_ref'\\); print\\('reset ok'\\)\")",
+      "Bash(./.venv/bin/python src/hello_jarvis.py \"from now on your name is Vega, then greet me in one short sentence\")",
+      "Bash(./.venv/bin/python src/hello_jarvis.py \"introduce yourself in one short sentence\")",
+      "Bash(./.venv/bin/python -c ' *)",
+      "Bash(./.venv/bin/python src/hello_jarvis.py \"be angry, drop your voice deeper, and tell me the deadline has passed\")",
+      "Bash(./.venv/bin/python src/hello_jarvis.py \"from now on your name is Vega, greet me briefly\")",
+      "Bash(./.venv/bin/python src/hello_jarvis.py \"who are you, in one line?\")",
+      "Bash(./.venv/bin/python \"/private/tmp/claude-501/-Users-adityabarnwal-Downloads-jarvis/2f3c6dc8-ee84-4743-a019-c52cfa64fed7/scratchpad/demo.py\")",
+      "Bash(./.venv/bin/python -c \"import sys; sys.path.insert\\(0,'src'\\); import memory; memory._db\\(\\).execute\\('DELETE FROM learned'\\); memory._db\\(\\).commit\\(\\); print\\('cleared'\\)\")",
+      "Bash(./.venv/bin/python -c \"import sys; sys.path.insert\\(0,'src'\\); import memory; memory.remember_fact\\('goes to the gym at 6am daily', topic='routine'\\); memory.remember_fact\\('main focus is quant prep', topic='goals'\\); print\\('stored'\\); print\\('context:'\\); print\\(memory.build_context\\(\\)\\)\")",
+      "Bash(./.venv/bin/python -c \"import sys; sys.path.insert\\(0,'src'\\); import memory; memory._db\\(\\).execute\\('DELETE FROM learned'\\); memory._db\\(\\).execute\\(\\\\\"DELETE FROM facts\\\\\"\\); memory._db\\(\\).commit\\(\\); print\\('memory.db reset to clean slate'\\)\")",
+      "Bash(brew install *)",
+      "Bash(mkdir -p ~/.local/share/whisper-models)",
+      "Bash(curl -sL -o ~/.local/share/whisper-models/ggml-base.en.bin \"https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.en.bin\")",
+      "Read(//Users/adityabarnwal/.local/share/whisper-models/**)",
+      "Bash(whisper-cli --help)",
+      "Bash(say -o /tmp/jarvis_test.aiff \"Open Spotify and turn the volume down to thirty.\")",
+      "Bash(afconvert -f WAVE -d LEI16@16000 -c 1 /tmp/jarvis_test.aiff /tmp/jarvis_test.wav)",
+      "Bash(./.venv/bin/python -c \"import sys; sys.path.insert\\(0,'src'\\); import talk; print\\('talk.py OK'\\)\")",
+      "Bash(say -o /tmp/j2.aiff \"Remember that my sister's name is Anjali.\")",
+      "Bash(afconvert -f WAVE -d LEI16@16000 -c 1 /tmp/j2.aiff /tmp/j2.wav)",
+      "Bash(rm -f /tmp/jarvis_test.aiff /tmp/jarvis_test.wav /tmp/j2.aiff /tmp/j2.wav)"
+    ]
+  }
+}
