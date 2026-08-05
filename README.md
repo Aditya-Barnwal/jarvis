@@ -43,7 +43,7 @@ These four rules shape every design decision. They're the reason some "obvious" 
 
 ## Status
 
-**Working hands-free voice assistant with 38 tools.** Say "Hey Jarvis" (or "Friday") → it
+**Working hands-free voice assistant with 42 tools.** Say "Hey Jarvis" (or "Friday") → it
 transcribes locally, thinks (Groq `gpt-oss-20b` online / Ollama `qwen2.5:7b` offline), runs a
 tool, and speaks back in a British voice.
 
